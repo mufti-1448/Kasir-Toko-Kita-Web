@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('produk', function (Blueprint $tabel) {
             $tabel->id('id_produk');
-            $tabel->varchar('nama_produk');
+            $tabel->string('nama_produk');
             $tabel->integer('harga');
             $tabel->integer('stok');
             //foreign key
@@ -21,7 +21,7 @@ return new class extends Migration
             $tabel->foreign('id_kategori')
                     ->references('id_kategori')
                     ->on('kategori')
-                    ->onDelete('cascade');
+                    ->cascadeOnDelete();
         });
     }
 

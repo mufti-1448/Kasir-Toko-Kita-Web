@@ -20,13 +20,13 @@ return new class extends Migration
             $table->foreign('id_transaksi')
                     ->references('id_transaksi')
                     ->on('transaksi')
-                    ->onDelete('cascade');
-                    
+                    ->cascadeOnDelete();
+
             $table->unsignedBigInteger('id_produk');
             $table->foreign('id_produk')
                     ->references('id_produk')
                     ->on('produk')
-                    ->onDelete('cascade');
+                    ->cascadeOnDelete();
         });
     }
 

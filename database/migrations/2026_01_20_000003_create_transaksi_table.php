@@ -20,7 +20,7 @@ return new class extends Migration
             $tabel->foreign('id_user')
                     ->references('id_user')
                     ->on('users')
-                    ->onDelete('cascade');
+                    ->cascadeOnDelete();
         });
     }
 
