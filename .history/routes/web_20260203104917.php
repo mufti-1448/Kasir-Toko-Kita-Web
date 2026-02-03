@@ -3,12 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use Symfony\Component\Mailer\Transport\RoundRobinTransport;
-use App\Http\Controllers\AdminController;
+use
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::get('/aaa', [LoginController::class, 'showLoginForm']);
-
-Route::get('/', [AdminController::class, 'index']);
+Route::get('/', [LoginController::class, 'showLoginForm']);

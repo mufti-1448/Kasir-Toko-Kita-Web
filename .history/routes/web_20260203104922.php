@@ -9,6 +9,5 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 
-Route::get('/aaa', [LoginController::class, 'showLoginForm']);
-
-Route::get('/', [AdminController::class, 'index']);
+Route::get('/', [LoginController::class, 'showLoginForm']);
+Route::post('/login', [LoginController::class, 'login'])->name('login');
