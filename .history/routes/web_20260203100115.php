@@ -8,4 +8,4 @@ use Symfony\Component\Mailer\Transport\RoundRobinTransport;
 //     return view('welcome');
 // });
 
-Route::get('/', [LoginController::class, 'showLoginForm']);
+Route::get('/login', [LoginController::class, 'showLoginForm']);
